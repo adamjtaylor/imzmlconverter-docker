@@ -8,12 +8,12 @@ RUN apt-get update && \
 
 RUN java -version
 
-RUN wget https://github.com/AlanRace/imzMLConverter/releases/download/2.0.5/jimzMLConverter-2.0.5.zip
-RUN unzip jimzMLConverter-2.0.5.zip
+RUN wget https://github.com/AlanRace/imzMLConverter/releases/download/2.1.0/jimzMLConverter-2.1.0.zip
+RUN unzip jimzMLConverter-2.1.0.zip
 RUN mv jimzMLConverter/target/* ./
 RUN rm -r jimzMLConverter
 
-RUN echo "#!/bin/bash\njava -jar jimzMLConverter-2.0.5.jar \"\$@\"" > jimzMLConverter
+RUN echo "#!/bin/bash\njava -jar jimzMLConverter-2.1.0.jar \"\$@\"" > jimzMLConverter
 RUN chmod 775 jimzMLConverter
 
 ENV PATH="/data:${PATH}"
