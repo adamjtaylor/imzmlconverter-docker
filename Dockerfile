@@ -16,6 +16,6 @@ RUN rm -r jimzMLConverter
 RUN echo "#!/bin/bash\njava -jar jimzMLConverter-2.1.0.jar \"\$@\"" > jimzMLConverter
 RUN chmod 775 jimzMLConverter
 
-ENV PATH="/data:${PATH}"
+# ENV PATH="/data:${PATH}"
 
 
